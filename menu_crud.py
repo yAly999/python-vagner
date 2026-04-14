@@ -41,3 +41,11 @@ for aluno in alunos:
     print(aluno)
 
 print("\n" + "="*20)
+
+print("=== dados da tabela (ordenados por nome) ===\n")
+
+cursor.execute("SELECT * FROM alunos ORDER BY nome ASC")
+alunos = cursor.fetchall()
+
+for aluno in alunos:
+    print(aluno)
